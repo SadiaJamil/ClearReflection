@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="imagepickercssandjs/imagery.css" />
+    <script src="imagepickercssandjs/imagery.js"></script>
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row  mt-5">
+            <div class=" col col-sm-6 col-md-6 col-lg-6">
+                <div id="preview-container"></div>
+                <div id="image-container">
+                    <img src="productDetailImages/image1.jpg" 
+                         data-src="productDetailImages/image1.jpg" />
+                    <img src="productDetailImages/img1_new.jpg" 
+                         data-src="productDetailImages/img1_new.jpg" />
+                    <img src="productDetailImages/img3_new.jpg" 
+                         data-src="productDetailImages/img3_new.jpg" />
+                    <img src="productDetailImages/img4_new.jpg" 
+                         data-src="productDetailImages/img4_new.jpg" />
+                  </div>
+                </div>
+            
+            <div class=" col col-sm-6 col-md-6 col-lg-6">
+                <!-- <p><a class="text-secondary" href="">HOME / DECORATIVE</a></p> -->
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">HOME</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">DECORATIVE</li>
+                    </ol>
+                  </nav>
+                <h1>Belgravia Grand Antique Silver</h1>
+                <hr>
+                <h2>£549.00 – £649.00</h2>
+              <ul class="text-secondary">
+                <li>Handcrafted antique finish</li>
+                <li>10 Year Guarantee</li>
+                <li>Also available in Gold and Black</li>
+                <li>H 223cm x W 142cm</li>
+              </ul>
+              <br>
+              <label for="">Size</label>
+              <select name="" id="" class="form-control">
+                <option value="">Choose an option</option>
+                <option value="">H 203cm x W 102cm</option>
+                <option value="">H 223cm x W 142cm</option>
+              </select>
+              <i></i> <i></i> <button class="btn btn-danger mt-5">ADD TO BASKET</button> <br>
+              <p class="text-success mt-3">IN STOCK - FREE delivery within 5 - 10 working days</p>
+            </div>
+        
+    </div>
+
+    <script>
+    $("document").ready(function(){
+        
+        $("div#image-container > img").Imagery();
+        $("div#image-container > img").Imagery({
+            
+        onSelectedImage:function(data){
+      // do something
+    }
+  });
+        
+        });
+        </script>
+</body>
+</html>
